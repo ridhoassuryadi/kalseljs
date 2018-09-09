@@ -1,7 +1,16 @@
 import React from 'react';
 import Helmet from 'react-helmet';
+
+// Import Component
 import Post from '../components/Post';
-import Sidebar from '../components/Sidebar';
+import HeroBanner from '../layouts/HeroBanner';
+import HeaderApp from '../layouts/Header';
+import Description from '../layouts/Description';
+import Learning from '../layouts/Learning';
+import MeetupSection from '../layouts/MeetupSection';
+import Footer from '../layouts/Footer';
+
+import '../assets/scss/init.scss';
 
 class IndexRoute extends React.Component {
   render() {
@@ -18,12 +27,12 @@ class IndexRoute extends React.Component {
           <title>{title}</title>
           <meta name="description" content={subtitle} />
         </Helmet>
-        <Sidebar {...this.props} />
-        <div className="content">
-          <div className="content__inner">
-            {items}
-          </div>
-        </div>
+        <HeaderApp />
+        <HeroBanner />
+        <Description />
+        <MeetupSection />
+        <Learning /> 
+        <Footer />
       </div>
     );
   }

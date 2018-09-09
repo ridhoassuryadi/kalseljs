@@ -1,0 +1,57 @@
+@import "../../assets/scss/utilities/variables.scss";
+
+#headerApp {
+    position: fixed;
+    width: 100%;
+    height:72px;
+    z-index: 9;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .header__logo {
+        height: 32px;
+        margin-left: 3em;
+    }
+
+    @media #{$mobileOnly}{
+        .header__logo {
+            margin-left: 1.2em;
+        }
+    }
+}
+
+
+.header__links {
+    display: flex;
+    list-style: none;
+    margin: 0 3em 0 0;
+
+    > li {
+        margin: 0 0 0 0.8em;
+
+        > a {
+            color: #9F9D9D;
+        }
+
+        &:hover {
+            > a { 
+                color: #E06D2A;
+            }
+        }
+    }
+
+    @media #{$mobileOnly}{
+        display: none;
+    }
+}
+
+.header__hamburger-menu {
+    display: none;
+    height: 2px;
+    background-color: #626060;
+
+    @media #{$mobileOnly}{
+        display: inline-flex;
+    }
+}

@@ -1,0 +1,157 @@
+// Setup
+// ------------------------------------------------------------------------ //
+$BTN_PADDING: 1.1em 3.5em;
+
+// Base Style
+// ------------------------------------------------------------------------ //
+.btn,
+.btn--alt {
+    display: inline-block;
+    padding: $BTN_PADDING;
+    border: 0;
+    font-weight: 700;
+    line-height: normal;
+    text-align: center;
+    vertical-align: middle;
+    color: $color-base;
+    background: #ddd;
+    cursor: pointer;
+    user-select: none;
+    border-radius: 2px;
+    transition: $animate;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    font-size: 15px;
+    font-weight: 600;
+
+    &:focus {
+        outline: none;
+    }
+    &[disabled] {
+        cursor: not-allowed !important;
+        pointer-events: none !important;
+        background-color: #c9c9c9 !important;
+        color: #989898 !important;
+    }
+
+    &:hover {
+        box-shadow: inset 0 -4px 0 rgba(20, 29, 39, 0.15);
+    }
+
+    &:active,
+    &:focus {
+        box-shadow: inset 0 2px 0 rgba(31,45,61,.15);
+    }
+}
+
+.btn--primary {
+    background-color: #E16D2B;
+    color: white;
+}
+
+@mixin resetButton {
+    padding: 0;
+    background-color: transparent;
+    text-align: left;
+    
+    &:active, 
+    &:hover {
+        box-shadow: none;
+    }
+}
+
+.btn--hamburger-menu {
+    @include resetButton();
+    padding: .5em 0;
+    width: 26px;
+    margin-right: 1.2em;
+    height: 0;
+    display: none;
+
+    span {
+        display: inline-block;
+        width: 65%;
+        height: 3px;
+        background-color: #626060;
+        border-radius: 0;
+    }
+
+    &:after,
+    &:before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 3px;
+        left: 0;
+        background-color: #626060;
+    }
+
+    &:before {
+        top: 0;
+    }
+
+    &::after {
+        bottom: -2px;
+    }
+
+    @media #{$mobileOnly}{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        position: relative;
+    }
+}
+
+.btn--link {
+    @include resetButton();
+
+    padding: 1em 0;
+    color: #C15D24;
+    font-weight: 600;
+    font-size: 16px;
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    align-self: flex-start;
+
+    svg {
+        height: 16px;
+        width: 16px;
+    }
+
+    &__text {
+        margin-left: .2em;
+        transition: all 200ms linear;
+    }
+
+    &:hover {
+
+        > .btn--link__text {
+            margin-left: .5em;
+        }
+    }
+
+
+    &__rect {
+        position: absolute;
+        width: 0px;
+        height: 28px;
+        top: -50%;
+        transform: translateY(128%);
+        background-color: #FBF5F5;
+        transition: all 200ms linear;
+        left: 0;
+        z-index: -2;
+
+        &.hovered {
+            width: 60%;
+        }
+
+        &.unhovered {
+            animation-name: rectanimate;
+            animation-duration: 400ms;
+            animation-timing-function: ease-in;
+            padding-left: 0;
+        }
+    }
+}
+

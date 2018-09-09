@@ -1,6 +1,5 @@
 import React from 'react';
 import Helmet from 'react-helmet';
-import PageTemplateDetails from '../components/PageTemplateDetails';
 
 class PageTemplate extends React.Component {
   render() {
@@ -15,7 +14,6 @@ class PageTemplate extends React.Component {
           <title>{`${pageTitle} - ${title}`}</title>
           <meta name="description" content={description} />
         </Helmet>
-        <PageTemplateDetails {...this.props} />
       </div>
     );
   }

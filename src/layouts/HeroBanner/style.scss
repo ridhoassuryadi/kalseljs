@@ -1,0 +1,135 @@
+@import "../../assets/scss/utilities/variables.scss";
+
+.hero {
+    width: 100%;
+    padding-bottom: 4.5em;
+    position: relative;
+    overflow: hidden;
+
+    &:after {
+        content: '';
+        background-color: #FFFBF9;
+        position: absolute;
+        width: 180%;
+        height: 120%;
+        left: -40%;
+        top: -20%;
+        border-radius: 50%;
+        z-index: -1;
+    }
+
+    > .container {
+        padding-top: 10em;
+        position: relative;
+        height: auto;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    @media #{$mobileOnly}{
+
+        > .container {
+            padding-top: 7em;
+            flex-direction: column;
+        }
+
+        &:after {
+            width: 260%;
+            left: -80%;
+        }
+    }
+}
+
+.hero__img {
+    margin-right: 8%;
+
+    @media #{$mobileOnly}{
+        margin: 1.2em;
+    }
+}
+
+.hero__text {
+    padding-left: 8%;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    text-align: left;
+    flex: 1;
+    justify-content: center;
+    max-width: 340px;
+
+    p,
+    h3,
+    h5 {
+        font-family: 'Archivo', sans-serif;
+        margin: 0;
+    }
+
+    h5,
+    p {
+        color: #929090;
+    }
+
+    p {
+        margin-bottom: .4em;
+
+        > span > img {
+            display: inline;
+            height: 24px;
+            vertical-align: middle;
+            -webkit-animation: rotation 1s infinite linear;
+        }
+    }
+
+    h3 {
+        font-weight: bold;
+        font-size: 36px;
+        line-height: 36px;
+        color: #5B5959;
+
+        span {
+            color: #E16D2B;
+        }
+    }
+
+    h5 {
+        font-weight: normal;
+        margin-top: 1.2em;
+        font-size: 18px;
+    }
+
+    @media #{$mobileOnly}{
+        align-items: center;
+        text-align: center;
+        padding-left: 0;
+        order: 2;
+
+        h3 {
+            font-size: 32px;
+        }
+
+        p {
+            font-size: 16px;
+        }
+    }
+}
+
+@keyframes rotation {
+    0% {
+            transform: rotate(0deg);
+    }
+
+    40% {
+        transform: rotate(4deg);
+    }
+
+    60% {
+        transform: rotate(6deg);
+    }
+    80% {
+        transform: rotate(4deg);
+    }
+    100% {
+            transform: rotate(0deg);
+    }
+}

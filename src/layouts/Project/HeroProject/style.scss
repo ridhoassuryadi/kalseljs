@@ -1,0 +1,79 @@
+@import "../../../assets/scss/utilities/variables";
+
+.hero-project {
+    height: 518px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../../../assets/images/tile_icon.png');
+    background-repeat: repeat;
+
+
+    .container {
+        max-width: 500px;
+
+        h3 {
+            font-family: 'Archivo', sans-serif;
+            font-size: 32px;
+            font-weight: bold;
+            line-height: 1em;
+            margin: 0;
+        }
+    }
+
+    @media #{$mobileOnly}{
+        height: calc(100vh - 58px);
+        .container {
+            width: 80%;
+
+            h3 {
+                font-size: 28px;
+            }
+        }
+    }
+
+}
+
+.hero-project__input {
+    display: flex;
+    background-color: white;
+    padding: .8em;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    border-radius: 3px;
+    margin-top: 1.2em;
+    transition: box-shadow .3s ease-out, transform .3s ease-out, opacity .2s ease-out;
+
+    &.on-focus,
+    &:hover {
+        box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    }
+
+    svg {
+        color: #D2D0D0;
+        margin-right: .4em;
+    }
+    
+    input {
+        background-color: transparent;
+        border: 0;
+        width: 100%;
+        font-weight: 600;
+        color: #5A5959;
+
+        &:focus {
+            outline: 0px;
+        }
+        &:hover {
+            outline: 0;
+        }
+
+        &::placeholder {
+            color: #989898;
+        }
+    }
+
+
+    &.on-focus {
+        
+    }
+}

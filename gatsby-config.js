@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     url: 'https://lumen.netlify.com',
-    title: 'Blog by John Doe',
+    title: 'KALSELJS - Javascript User Group',
     subtitle: 'Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu.',
     copyright: '© All rights reserved.',
     disqusShortname: '',
@@ -122,7 +122,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: [`roboto\:400,400i,500,700`]
+        fonts: [`roboto\:400,400i,500,700`, `archivo\:400,500,600,700`]
       }
     },
     {

@@ -1,0 +1,35 @@
+.hamburger-menu {
+    position: fixed;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    z-index: 4;
+    top: 0;
+    background-color: #E16D2B;
+    opacity: .97;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.hamburger-menu__links {
+    list-style: none;
+    padding: 0;
+
+    li > a {
+        font-weight: bold;
+        font-size: 36px;
+        color: #ECCEBD;
+    }
+}
+
+
+
+.hamburger-menu__promote {
+
+    color: white;
+
+     a {
+        color: #DDD244;
+    }
+}

@@ -1,6 +1,26 @@
 @charset "UTF-8";
 
+@import "utilities/utilities";
 @import "variables";
+@import "mixins/breakpoints";
+@import "mixins/margin";
+@import "mixins/padding";
+@import "mixins/line-height";
+@import "base/normalize";
+@import "base/generic";
+@import "base/highlight";
+@import "base/fonts";
+@import "base/grid";
 @import "mixins";
 @import "base";
 @import "pages";
+@import "modules/modules";
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    color: #5B5858;
+}
+

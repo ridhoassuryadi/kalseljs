@@ -116,7 +116,7 @@ ul {
 }
 
 p {
-    @include line-height(1);
+    @include line-height(0.7);
     @include margin-bottom(1);
 }
 
@@ -179,4 +179,27 @@ figcaption {
             padding: 40px 35px;
         }
     }
+}
+
+.container {
+    width: 94%;
+    max-width: 1020px;
+    margin: 0 auto;
+
+
+    &--medium {
+        max-width: 795px;
+    }
+
+    &--lists {
+        @media #{$mobileOnly}{
+            width: 100%;
+        }
+    }
+}
+
+%container {
+    width: 94%;
+    max-width: 1020px;
+    margin: 0 auto;
 }

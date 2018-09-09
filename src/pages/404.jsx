@@ -1,11 +1,9 @@
 import React from 'react';
-import Sidebar from '../components/Sidebar';
 
 class NotFoundRoute extends React.Component {
   render() {
     return (
       <div>
-        <Sidebar {...this.props} />
         <div className="content">
           <div className="content__inner">
             <div className="page">

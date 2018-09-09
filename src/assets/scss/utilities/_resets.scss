@@ -1,0 +1,39 @@
+html,
+button,
+input,
+select,
+textarea {
+    color: $base-font-color;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid $base-font-color;
+    margin: 1em 0;
+    padding: 0;
+}
+
+img {
+    max-width: 100%;
+    vertical-align: middle;
+}
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+textarea {
+    resize: vertical;
+}
+
+address {
+    font-style: normal;
+}
+
+table {
+    width: 100%;
+}
