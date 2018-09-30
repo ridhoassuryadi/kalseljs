@@ -56,7 +56,7 @@ class HeaderApp extends React.Component {
                     <button className={this.hamburgerMenuClass(this.state.isOpen)} onClick={this.toggleClick}>
                         <span />
                     </button>
-                    <HamburgerMenu isOpen= {this.state.isOpen} />
+                    <HamburgerMenu isOpen={this.state.isOpen} />
                 </header>
 
         )
