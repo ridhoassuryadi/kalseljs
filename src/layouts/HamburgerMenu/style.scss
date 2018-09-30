@@ -10,26 +10,29 @@
     opacity: .97;
     flex-direction: column;
     justify-content: space-between;
-}
+    padding: 1em;
 
-.hamburger-menu__links {
-    list-style: none;
-    padding: 0;
 
-    li > a {
-        font-weight: bold;
-        font-size: 36px;
-        color: #ECCEBD;
+    &__head {
+        padding-bottom: 1em;
+        border-bottom: solid 1px #fff;
     }
-}
+    &__links {
+        list-style: none;
+        padding: 0;
 
+        li > a {
+            font-weight: bold;
+            font-size: 36px;
+            color: #ECCEBD;
+        }
+    }
 
+    &__promote {
+        color: white;
 
-.hamburger-menu__promote {
-
-    color: white;
-
-     a {
-        color: #DDD244;
+         a {
+            color: #DDD244;
+        }
     }
 }
