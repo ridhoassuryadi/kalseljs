@@ -400,6 +400,12 @@
     }
 }
 
+.full {
+    &-height {
+        height: 100vh;
+    }
+}
+
 .margin-left-title {
     margin-left: 3.8%;
 
@@ -506,6 +512,9 @@
     &-self {
         &-center {
             align-self: center;
+        }
+        &-start {
+            align-self: flex-start;
         }
     }
 
