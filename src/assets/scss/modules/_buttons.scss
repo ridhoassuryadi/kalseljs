@@ -52,7 +52,7 @@ $BTN_PADDING: 1.1em 3.5em;
     padding: 0;
     background-color: transparent;
     text-align: left;
-    
+
     &:active, 
     &:hover {
         box-shadow: none;
@@ -68,6 +68,7 @@ $BTN_PADDING: 1.1em 3.5em;
     display: none;
 
     span {
+        transition: .3s;
         display: inline-block;
         width: 65%;
         height: 3px;
@@ -86,10 +87,12 @@ $BTN_PADDING: 1.1em 3.5em;
     }
 
     &:before {
+        transition: .3s;
         top: 0;
     }
 
     &::after {
+        transition: .3s;
         bottom: -2px;
     }
 
@@ -98,6 +101,25 @@ $BTN_PADDING: 1.1em 3.5em;
         justify-content: flex-start;
         align-items: center;
         position: relative;
+    }
+
+    &--open {
+        z-index: 5;
+
+        span, &:after, &:before {
+            background: rgba(#fff,.5);
+        }
+        span {
+            display: none;
+        }
+
+        &:before {
+            transform: rotate(-45deg) translate(-5px,5px);
+        }
+
+        &:after {
+            transform: rotate(45deg) translate(-5px,-5px);
+        }
     }
 }
 
