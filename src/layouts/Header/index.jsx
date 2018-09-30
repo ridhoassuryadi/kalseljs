@@ -14,6 +14,24 @@ const activeStyle = {
 }
 
 class HeaderApp extends React.Component {
+    state = {
+      isOpen: false
+    }
+
+    toggleClick = () => {
+      this.setState({
+        isOpen: !this.state.isOpen
+      })
+    }
+
+    hamburgerMenuClass = (menuIsOpen) => {
+      if (menuIsOpen) {
+        return "btn btn--hamburger-menu btn--hamburger-menu--open"
+      } else {
+        return "btn btn--hamburger-menu"
+      }
+    }
+
     render(){
         return (
                 <header id="headerApp">
@@ -35,12 +53,12 @@ class HeaderApp extends React.Component {
                             </Link>
                         </li>
                     </ul>
-                    <button className="btn btn--hamburger-menu">
+                    <button className={this.hamburgerMenuClass(this.state.isOpen)} onClick={this.toggleClick}>
                         <span />
                     </button>
-                    <HamburgerMenu />
+                    <HamburgerMenu isOpen={this.state.isOpen} />
                 </header>
-                
+
         )
     }
 }

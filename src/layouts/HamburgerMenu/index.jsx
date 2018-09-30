@@ -9,7 +9,7 @@ import logoSquare from '../../assets/images/kalseljs-square__logo.svg';
 class HamburgerMenu extends React.Component {
     render(){
         return (
-            <section className="hamburger-menu">
+            <section className={this.props.isOpen ? 'hamburger-menu hamburger-menu--open' : 'hamburger-menu' }>
                 <div className="hamburger-menu__head">
                     <img src={logoSquare} alt="logo-square"/>
 
@@ -34,6 +34,10 @@ class HamburgerMenu extends React.Component {
             </section>
         )
     }
+}
+
+HamburgerMenu.defaultProps = {
+  isOpen: false
 }
 
 export default HamburgerMenu
