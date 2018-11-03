@@ -1,3 +1,6 @@
+const lost = require('lost');
+const pxtorem = require('postcss-pxtorem');
+
 module.exports = {
   siteMetadata: {
     url: 'https://lumen.netlify.com',
@@ -54,14 +57,13 @@ module.exports = {
         feeds: [
           {
             serialize: ({ query: { site, allMarkdownRemark } }) => (
-              allMarkdownRemark.edges.map(edge =>
-                Object.assign({}, edge.node.frontmatter, {
-                  description: edge.node.frontmatter.description,
-                  date: edge.node.frontmatter.date,
-                  url: site.siteMetadata.site_url + edge.node.fields.slug,
-                  guid: site.siteMetadata.site_url + edge.node.fields.slug,
-                  custom_elements: [{ 'content:encoded': edge.node.html }]
-                }))
+              allMarkdownRemark.edges.map(edge => Object.assign({}, edge.node.frontmatter, {
+                description: edge.node.frontmatter.description,
+                date: edge.node.frontmatter.date,
+                url: site.siteMetadata.site_url + edge.node.fields.slug,
+                guid: site.siteMetadata.site_url + edge.node.fields.slug,
+                custom_elements: [{ 'content:encoded': edge.node.html }]
+              }))
             ),
             query: `
               {
@@ -99,9 +101,7 @@ module.exports = {
         plugins: [
           {
             resolve: 'gatsby-remark-images',
-            options: {
-              maxWidth: 960
-            }
+            options: { maxWidth: 960 }
           },
           {
             resolve: 'gatsby-remark-responsive-iframe',
@@ -120,10 +120,8 @@ module.exports = {
       options: { trackingId: 'UA-73379983-2' }
     },
     {
-      resolve: `gatsby-plugin-google-fonts`,
-      options: {
-        fonts: [`roboto\:400,400i,500,700`, `archivo\:400,500,600,700`]
-      }
+      resolve: 'gatsby-plugin-google-fonts',
+      options: { fonts: ['roboto\:400,400i,500,700', 'archivo\:400,500,600,700'] }
     },
     {
       resolve: 'gatsby-plugin-sitemap',
@@ -148,19 +146,54 @@ module.exports = {
               }
           }`,
         output: '/sitemap.xml',
-        serialize: ({ site, allSitePage }) =>
-          allSitePage.edges.map((edge) => {
-            return {
-              url: site.siteMetadata.url + edge.node.path,
-              changefreq: 'daily',
-              priority: 0.7
-            };
-          })
+        serialize: ({ site, allSitePage }) => allSitePage.edges.map((edge) => {
+          return {
+            url: site.siteMetadata.url + edge.node.path,
+            changefreq: 'daily',
+            priority: 0.7
+          };
+        })
       }
     },
     'gatsby-plugin-offline',
     'gatsby-plugin-catch-links',
     'gatsby-plugin-react-helmet',
-    'gatsby-plugin-postcss-sass'
+    {
+      resolve: 'gatsby-plugin-sass',
+      options: {
+        postCssPlugins: [
+          lost(),
+          pxtorem({
+            rootValue: 16,
+            unitPrecision: 5,
+            propList: [
+              'font',
+              'font-size',
+              'line-height',
+              'letter-spacing',
+              'margin',
+              'margin-top',
+              'margin-left',
+              'margin-bottom',
+              'margin-right',
+              'padding',
+              'padding-top',
+              'padding-left',
+              'padding-bottom',
+              'padding-right',
+              'border-radius',
+              'width',
+              'max-width'
+            ],
+            selectorBlackList: [],
+            replace: true,
+            mediaQuery: false,
+            minPixelValue: 0
+          })
+        ],
+        precision: 8
+      }
+    },
+    'gatsby-plugin-postcss'
   ]
 };
