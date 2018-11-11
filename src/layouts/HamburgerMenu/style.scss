@@ -1,10 +1,11 @@
 .hamburger-menu {
     transition: .3s;
     position: fixed;
-    top: -50%;
+    top: -100%;
     left: 0;
     right: 0;
     display: flex;
+
     &--open {
         height: 100%;
         z-index: 4;

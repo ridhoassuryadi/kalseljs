@@ -1,0 +1,31 @@
+#hero-clean-description {  
+    padding-top: 10em;
+    margin-bottom: 5em;
+    
+    h3 {
+        font-weight: bold;
+        font-size: 36px;
+        line-height: 36px;
+        position: relative;
+        display: inline-block;
+
+        &:after {
+            content: '';
+            width: 8px;
+            height: 8px;
+            position: absolute;
+            bottom: 10%;
+            right: -5%;
+            background-color: #ACACAC;
+            border-radius: 100%;
+        }
+    }
+
+    p {
+        max-width: 340px;
+        margin-top: .1em;
+        font-size: 18px;
+        line-height: 24px;
+        color: #887F7F;
+    }
+}

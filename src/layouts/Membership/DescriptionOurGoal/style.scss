@@ -1,0 +1,37 @@
+@import "../../../assets/scss/utilities/variables.scss";
+
+#descOurGoal {
+    position: relative;
+    padding-bottom: 1em;
+
+    &:after {
+        content: '';
+        position: absolute;
+        top: 50px;
+        height: calc(100% - 50px);
+        width: 100%;
+        background-color: #FFF4EF;
+        z-index: -2;
+    }
+    p {
+        font-size: 16px;
+        color: #929090;
+    }
+}
+.desc-our-goal__picture {
+    padding-right: 3em;
+    margin-bottom: 2em;
+
+    img {
+        width: 100%;
+        border-bottom-right-radius: 3em;
+    }
+
+    @media #{$mobileOnly}{
+        padding-right: 0;
+
+        img {
+            border-bottom-right-radius: 0;
+        }
+    }
+}

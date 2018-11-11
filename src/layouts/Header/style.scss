@@ -8,6 +8,8 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    border-bottom: 1px solid #E9E4E4;
+    top: 0;
 
     .header__logo {
         height: 32px;
@@ -19,6 +21,14 @@
             margin-left: 1.2em;
         }
     }
+
+    &.active {
+        background-color: white;
+    }
+
+    &.no-border {
+        border-bottom: 0;
+    }
 }
 
 
@@ -28,7 +38,7 @@
     margin: 0 3em 0 0;
 
     > li {
-        margin: 0 0 0 0.8em;
+        margin: 0 0 0 1.6em;
 
         > a {
             color: #9F9D9D;

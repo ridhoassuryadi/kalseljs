@@ -1,40 +1,40 @@
 const _ = require('lodash');
 const Promise = require('bluebird');
 const path = require('path');
-const lost = require('lost');
-const pxtorem = require('postcss-pxtorem');
 const slash = require('slash');
 
-exports.createPages = ({ graphql, boundActionCreators }) => {
-  const { createPage } = boundActionCreators;
+exports.createPages = ({ graphql, actions }) => {
+  const { createPage } = actions;
 
   return new Promise((resolve, reject) => {
     const postTemplate = path.resolve('./src/templates/post-template.jsx');
     const pageTemplate = path.resolve('./src/templates/page-template.jsx');
     const tagTemplate = path.resolve('./src/templates/tag-template.jsx');
-    const categoryTemplate = path.resolve('./src/templates/category-template.jsx');
+    const categoryTemplate = path.resolve(
+      './src/templates/category-template.jsx'
+    );
 
     graphql(`
-    {
-      allMarkdownRemark(
-        limit: 1000,
-        filter: { frontmatter: { draft: { ne: true } } },
-      ) {
-        edges {
-          node {
-            fields {
-              slug
-            }
-            frontmatter {
-              tags
-              layout
-              category
+      {
+        allMarkdownRemark(
+          limit: 1000
+          filter: { frontmatter: { draft: { ne: true } } }
+        ) {
+          edges {
+            node {
+              fields {
+                slug
+              }
+              frontmatter {
+                tags
+                layout
+                category
+              }
             }
           }
         }
       }
-    }
-  `).then((result) => {
+    `).then((result) => {
       if (result.errors) {
         console.log(result.errors);
         reject(result.errors);
@@ -91,16 +91,16 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
   });
 };
 
-exports.onCreateNode = ({ node, boundActionCreators, getNode }) => {
-  const { createNodeField } = boundActionCreators;
+exports.onCreateNode = ({ node, actions, getNode }) => {
+  const { createNodeField } = actions;
 
   if (node.internal.type === 'File') {
     const parsedFilePath = path.parse(node.absolutePath);
     const slug = `/${parsedFilePath.dir.split('---')[1]}/`;
     createNodeField({ node, name: 'slug', value: slug });
   } else if (
-    node.internal.type === 'MarkdownRemark' &&
-    typeof node.slug === 'undefined'
+    node.internal.type === 'MarkdownRemark'
+    && typeof node.slug === 'undefined'
   ) {
     const fileNode = getNode(node.parent);
     let slug = fileNode.fields.slug;
@@ -114,54 +114,17 @@ exports.onCreateNode = ({ node, boundActionCreators, getNode }) => {
     });
 
     if (node.frontmatter.tags) {
-      const tagSlugs = node.frontmatter.tags.map(tag => `/tags/${_.kebabCase(tag)}/`);
+      const tagSlugs = node.frontmatter.tags.map(
+        tag => `/tags/${_.kebabCase(tag)}/`
+      );
       createNodeField({ node, name: 'tagSlugs', value: tagSlugs });
     }
 
     if (typeof node.frontmatter.category !== 'undefined') {
-      const categorySlug = `/categories/${_.kebabCase(node.frontmatter.category)}/`;
+      const categorySlug = `/categories/${_.kebabCase(
+        node.frontmatter.category
+      )}/`;
       createNodeField({ node, name: 'categorySlug', value: categorySlug });
     }
   }
 };
-
-exports.modifyWebpackConfig = ({ config }) => {
-  config.merge({
-    postcss: [
-      lost(),
-      pxtorem({
-        rootValue: 16,
-        unitPrecision: 5,
-        propList: [
-          'font',
-          'font-size',
-          'line-height',
-          'letter-spacing',
-          'margin',
-          'margin-top',
-          'margin-left',
-          'margin-bottom',
-          'margin-right',
-          'padding',
-          'padding-top',
-          'padding-left',
-          'padding-bottom',
-          'padding-right',
-          'border-radius',
-          'width',
-          'max-width'
-        ],
-        selectorBlackList: [],
-        replace: true,
-        mediaQuery: false,
-        minPixelValue: 0
-      })
-    ]
-  });
-};
-
-exports.onCreatePage = ({ page }) => {
-  if(page.path.startsWith('/404')){
-    page.layout = '404.index'
-  }
-}

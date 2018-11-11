@@ -108,6 +108,9 @@
 
         > h3 {
             margin-top: .6em;
+            display: flex;
+            margin-left: auto;
+            margin-right: auto;
             
             &:after {
                 background-color: #E6E1E1;
