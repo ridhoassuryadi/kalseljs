@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'gatsby-link';
 import Helmet from 'react-helmet';
 import kebabCase from 'lodash/kebabCase';
+import { graphql } from 'gatsby';
 
 class CategoriesRoute extends React.Component {
   render() {
@@ -21,7 +22,11 @@ class CategoriesRoute extends React.Component {
                     {categories.map(category => (
                       <li key={category.fieldValue} className="categories__list-item">
                         <Link to={`/categories/${kebabCase(category.fieldValue)}/`} className="categories__list-item-link">
-                          {category.fieldValue} ({category.totalCount})
+                          {category.fieldValue}
+                          {' '}
+(
+                          {category.totalCount}
+)
                         </Link>
                       </li>
                     ))}

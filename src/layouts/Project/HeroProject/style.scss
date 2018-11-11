@@ -1,12 +1,14 @@
 @import "../../../assets/scss/utilities/variables";
 
 .hero-project {
-    height: 518px;
+    height: 420px;
     display: flex;
     justify-content: center;
     align-items: center;
     background-image: url('../../../assets/images/tile_icon.png');
     background-repeat: repeat;
+    padding-top: 2em;
+    margin-top: 73px;
 
 
     .container {

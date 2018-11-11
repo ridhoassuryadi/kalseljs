@@ -181,3 +181,39 @@ $BTN_PADDING: 1.1em 3.5em;
     padding: 1.1em 1.8em;
 }
 
+.btn--hilite {
+    padding: 0;
+    background-color: transparent;
+    color: #f7a046;
+    position: relative;
+
+    &:after {
+        content: '';
+        position: absolute;
+        display: block;
+        left: 0;
+        right: 0;
+        top: calc(100% + 4px);
+        height: 2px;
+        transform: scaleX(0);
+        background-color: #FFB88E;
+        transition: transform .25s ease-in;
+        transform-origin: right center;
+    }
+
+    &:hover {
+        box-shadow: none;
+
+        &:after {
+            transform: scale(1);
+            transform-origin: left center;
+        }
+    }
+}
+
+.btn--ghost {
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+    padding: .7em 2em;
+}

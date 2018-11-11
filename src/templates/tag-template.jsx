@@ -1,5 +1,6 @@
 import React from 'react';
 import Helmet from 'react-helmet';
+import { graphql } from 'gatsby';
 import TagTemplateDetails from '../components/TagTemplateDetails';
 
 class TagTemplate extends React.Component {

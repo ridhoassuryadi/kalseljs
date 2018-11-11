@@ -520,6 +520,12 @@ $col-margin     : 3%;
         @media #{$netbookUp} {
             width: calc((100% / 4) - 1.4em);
         }
+
+        &.in-mobile-half {
+            @media #{$mobileOnly} {
+                width: calc(50% - 1.4em);
+            }
+        }
     }
 }
 

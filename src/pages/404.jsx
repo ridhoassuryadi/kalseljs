@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { graphql } from 'gatsby';
 class NotFoundRoute extends React.Component {
   render() {
     return (

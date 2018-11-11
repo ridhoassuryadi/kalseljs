@@ -1,7 +1,7 @@
 {
   "version": "2.0.2",
-  "name": "gatsby-starter-lumen",
-  "description": "Simple starter for Gatsby",
+  "name": "KalselJS Site",
+  "description": "Website for KalselJS, for collaboration, learning",
   "main": "n/a",
   "scripts": {
     "develop": "gatsby develop",
@@ -12,7 +12,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "deploy": "gatsby build --prefix-paths && gh-pages -d public"
   },
-  "repository": "git+https://github.com/alxshelepenok/gatsby-starter-lumen.git",
+  "repository": "git+https://github.com/KalselJS/kalseljs.git",
   "keywords": [
     "gatsby",
     "blog",

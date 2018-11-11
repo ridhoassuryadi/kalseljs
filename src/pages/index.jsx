@@ -1,5 +1,6 @@
 import React from 'react';
 import Helmet from 'react-helmet';
+import { graphql } from 'gatsby';
 
 // Import Component
 import Post from '../components/Post';
@@ -22,11 +23,11 @@ class IndexRoute extends React.Component {
           <title>{title}</title>
           <meta name="description" content={subtitle} />
         </Helmet>
-        <HeaderApp />
+        <HeaderApp className="no-border" />
         <HeroBanner />
         <Description />
         <MeetupSection />
-        <Learning /> 
+        <Learning />
         <Footer />
       </div>
     );
