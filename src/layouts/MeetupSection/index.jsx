@@ -21,7 +21,7 @@ class MeetupSection extends React.Component {
                                 <p>Software Engineer quipper</p>
                             </div>
                         </div>
-                        <h2 className="meetup-section__title align-left">Mengenal UI / UX dari sudut pandang Developer</h2>
+                        <h2 className="meetup-section__title">Mengenal UI / UX dari sudut pandang Developer</h2>
                         <div className="meetup-section__time text-18">
                             <p className="">16 November 2018</p>
                             <p>6.30 PM ( WIB )</p>
