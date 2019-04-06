@@ -43,7 +43,13 @@
     }
 
     @media #{$mobileOnly}{
+        text-align: center;
         padding-bottom: 6em !important;
+
+        * {
+          margin: auto;
+          text-align: center
+        }
 
         .container {
             width: 100%;
@@ -93,8 +99,13 @@
     }
 
     @media #{$mobileOnly}{
+        text-align: center;
         flex-direction: column;
         align-items: flex-start;
+
+        &-item {
+            margin: 0 auto;
+        }
 
         > .meetup-section__speaker-item {
             margin-bottom: .5em;
@@ -118,6 +129,7 @@
     font-size: 32px;
     margin: .6em 0;
     position: relative;
+    text-align: left;
 
     @media #{$mobileOnly}{
         font-size: 28px;
@@ -130,7 +142,9 @@
             width: 65px;
             height: 6px;
             left: 0;
+            right: 0;
             background-color: #E6E1E1;
+            margin: auto;
         }
     }
 }
@@ -148,7 +162,10 @@
     }
 
     @media #{$mobileOnly}{
-        > p { font-size: 16px; }
+        > p {
+            font-size: 16px;
+            float: none;
+        }
     }
 }
 
@@ -191,6 +208,9 @@
     }
 
     @media #{$mobileOnly}{
+        display: inline-table;
+        margin: auto;
+        margin-top: 2em;
         font-size: 14px;
         a { 
             font-size: 14px;
