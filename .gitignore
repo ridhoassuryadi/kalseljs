@@ -7,3 +7,5 @@ npm-debug.log
 .idea
 gatsby-starter-lumen.iml
 yarn.lock
+.DS_Store
+**/.DS_Store
