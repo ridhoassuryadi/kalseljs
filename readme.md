@@ -20,5 +20,3 @@ npm run develop
 ```bash
 npm run build
 ```
-
-
