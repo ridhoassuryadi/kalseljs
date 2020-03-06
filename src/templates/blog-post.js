@@ -1,9 +1,8 @@
 import React from 'react'
 import Helmet from 'react-helmet'
-import { Link, graphql } from 'gatsby'
+import {graphql } from 'gatsby'
 
-import Bio from '../../re/Bio.bs'
-import Layout from '../components/layout'
+import Layout from 'components/layout'
 
 class BlogPostTemplate extends React.Component {
   render() {
@@ -27,8 +26,6 @@ class BlogPostTemplate extends React.Component {
           {post.frontmatter.date}
         </p>
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
-        <hr style={{}} />
-        <Bio />
       </Layout>
     )
   }

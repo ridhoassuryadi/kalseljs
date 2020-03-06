@@ -11,6 +11,7 @@ type post = {
   },
 };
 
+
 [@react.component]
 let make = (~posts) => {
   let renderPosts =
