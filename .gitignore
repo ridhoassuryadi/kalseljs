@@ -2,6 +2,7 @@
 .cache
 node_modules
 yarn-error.log
+.graphql_ppx_cache
 
 # Build directory
 /public
@@ -9,3 +10,5 @@ yarn-error.log
 
 # BuckleScript
 /lib
+.merlin
+.bsb.lock
