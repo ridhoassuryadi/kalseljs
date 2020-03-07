@@ -15,9 +15,6 @@ module Styles = {
 
 [@react.component]
 let make = (~post) => {
-  let colors = React.useContext(Theme.context);
-
-  <Theme.Provider value=Colors.default>
   <article className=Styles.article>
     <Gatsby.Link
       _to={"/blog/" ++ post##frontmatter##path} className=Styles.link>
@@ -28,5 +25,4 @@ let make = (~post) => {
       {post##frontmatter##date |> Utils.formatDate |> str}
     </small>
   </article>
-  </Theme.Provider>
 };

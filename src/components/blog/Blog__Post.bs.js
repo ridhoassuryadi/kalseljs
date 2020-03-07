@@ -4,9 +4,7 @@
 var Css = require("bs-css/src/Css.js");
 var React = require("react");
 var Gatsby = require("gatsby");
-var Theme$ReactGatsbyTemplate = require("../uikit/foundation/Theme.bs.js");
 var Utils$ReactGatsbyTemplate = require("../../commons/Utils.bs.js");
-var Colors$ReactGatsbyTemplate = require("../uikit/foundation/Colors.bs.js");
 
 function str(prim) {
   return prim;
@@ -56,23 +54,19 @@ var Styles = {
 
 function Blog__Post(Props) {
   var post = Props.post;
-  React.useContext(Theme$ReactGatsbyTemplate.context);
-  return React.createElement(Theme$ReactGatsbyTemplate.Provider.make, {
-              value: Colors$ReactGatsbyTemplate.$$default,
-              children: React.createElement("article", {
-                    className: article
-                  }, React.createElement(Gatsby.Link, {
-                        to: "/blog/" + post.frontmatter.path,
-                        className: link,
-                        children: React.createElement("h2", {
-                              className: h2
-                            }, post.frontmatter.title)
-                      }), React.createElement("p", {
-                        className: p
-                      }, post.excerpt), React.createElement("small", {
-                        className: date
-                      }, Utils$ReactGatsbyTemplate.formatDate(post.frontmatter.date)))
-            });
+  return React.createElement("article", {
+              className: article
+            }, React.createElement(Gatsby.Link, {
+                  to: "/blog/" + post.frontmatter.path,
+                  className: link,
+                  children: React.createElement("h2", {
+                        className: h2
+                      }, post.frontmatter.title)
+                }), React.createElement("p", {
+                  className: p
+                }, post.excerpt), React.createElement("small", {
+                  className: date
+                }, Utils$ReactGatsbyTemplate.formatDate(post.frontmatter.date)));
 }
 
 var make = Blog__Post;
