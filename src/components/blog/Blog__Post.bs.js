@@ -4,7 +4,7 @@
 var Css = require("bs-css/src/Css.js");
 var React = require("react");
 var Gatsby = require("gatsby");
-var Utils$ReactTemplate = require("./Utils.bs.js");
+var Utils$ReactGatsbyTemplate = require("../../commons/Utils.bs.js");
 
 function str(prim) {
   return prim;
@@ -52,7 +52,7 @@ var Styles = {
   date: date
 };
 
-function Post(Props) {
+function Blog__Post(Props) {
   var post = Props.post;
   return React.createElement("article", {
               className: article
@@ -66,10 +66,10 @@ function Post(Props) {
                   className: p
                 }, post.excerpt), React.createElement("small", {
                   className: date
-                }, Utils$ReactTemplate.formatDate(post.frontmatter.date)));
+                }, Utils$ReactGatsbyTemplate.formatDate(post.frontmatter.date)));
 }
 
-var make = Post;
+var make = Blog__Post;
 
 exports.str = str;
 exports.Styles = Styles;

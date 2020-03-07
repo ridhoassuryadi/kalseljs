@@ -24,5 +24,5 @@ let make = (~post) => {
     <small className=Styles.date>
       {post##frontmatter##date |> Utils.formatDate |> str}
     </small>
-  </article>;
+  </article>
 };
