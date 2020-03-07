@@ -16,12 +16,6 @@ module Styles = {
 [@react.component]
 let make = (~post) => {
   let colors = React.useContext(Theme.context);
-  Js.log("jalan");
-
-  React.useEffect(() => {
-      Js.log(colors);
-    None
-  });
 
   <Theme.Provider value=Colors.default>
   <article className=Styles.article>

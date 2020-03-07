@@ -56,12 +56,7 @@ var Styles = {
 
 function Blog__Post(Props) {
   var post = Props.post;
-  var colors = React.useContext(Theme$ReactGatsbyTemplate.context);
-  console.log("jalan");
-  React.useEffect((function () {
-          console.log(colors);
-          return ;
-        }));
+  React.useContext(Theme$ReactGatsbyTemplate.context);
   return React.createElement(Theme$ReactGatsbyTemplate.Provider.make, {
               value: Colors$ReactGatsbyTemplate.$$default,
               children: React.createElement("article", {
