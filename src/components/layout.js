@@ -3,7 +3,9 @@ import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
 
-import Header from './Header.bs'
+
+import Header from 'uikit/organism/Header.bs'
+import Store from 'prelude/Store.bs'
 
 const Layout = ({ children }) => (
   <StaticQuery
@@ -40,7 +42,9 @@ const Layout = ({ children }) => (
             fontFamily: '-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif'
           }}
         >
-          {children}
+          <Store>
+            {children}
+          </Store>
         </div>
       </>
     )}

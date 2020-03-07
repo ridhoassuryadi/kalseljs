@@ -11,6 +11,8 @@ module.exports = ({_stage, actions}) => {
       ],
       alias: {
         components: path.resolve(__dirname, '../src/components'),
+        uikit: path.resolve(__dirname,'../src/components/uikit'),
+        prelude: path.resolve(__dirname,'../src/components/prelude'),
         bindings: path.resolve(__dirname, '../src/bindings'),
         pages: path.resolve(__dirname, '../src/pages'),
         images: path.resolve(__dirname, '../src/images'),

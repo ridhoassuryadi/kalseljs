@@ -1,5 +1,5 @@
 {
-  "name": "react-template",
+  "name": "react-gatsby-template",
   "reason": {
     "react-jsx": 3
   },
@@ -16,10 +16,12 @@
   "bs-dependencies": [
     "reason-react",
     "bs-css",
-    "bs-date-fns"
+    "bs-date-fns",
+    "bs-webapi"
   ],
   "ppx-flags": [
-    "graphql_ppx/ppx"
+    "graphql_ppx/ppx",
+    "ppx-deriving/ppx.js"
   ],
   "refmt": 3
 }

@@ -1,3 +1,5 @@
+module Post = Blog__Post
+
 let str = React.string;
 
 type post = {
