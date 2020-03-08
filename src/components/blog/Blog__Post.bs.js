@@ -4,7 +4,7 @@
 var Css = require("bs-css/src/Css.js");
 var React = require("react");
 var Gatsby = require("gatsby");
-var Utils$ReactGatsbyTemplate = require("../../commons/Utils.bs.js");
+var Utils$KalseljsCommunityPage = require("../../commons/Utils.bs.js");
 
 function str(prim) {
   return prim;
@@ -66,7 +66,7 @@ function Blog__Post(Props) {
                   className: p
                 }, post.excerpt), React.createElement("small", {
                   className: date
-                }, Utils$ReactGatsbyTemplate.formatDate(post.frontmatter.date)));
+                }, Utils$KalseljsCommunityPage.formatDate(post.frontmatter.date)));
 }
 
 var make = Blog__Post;

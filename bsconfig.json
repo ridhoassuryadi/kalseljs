@@ -1,12 +1,18 @@
 {
-  "name": "react-gatsby-template",
+  "name": "kalseljs-community-page",
   "reason": {
     "react-jsx": 3
   },
-  "sources": {
-    "dir": "src",
-    "subdirs": true
-  },
+  "sources": [
+    {
+      "dir": "src",
+      "subdirs": true
+    },
+    {
+      "dir": "__stories__",
+      "subdirs": true
+    }
+  ],
   "package-specs": [{
     "module": "commonjs",
     "in-source": true
@@ -17,7 +23,8 @@
     "reason-react",
     "bs-css",
     "bs-date-fns",
-    "bs-webapi"
+    "bs-webapi",
+    "bs-storybook"
   ],
   "ppx-flags": [
     "graphql_ppx/ppx",

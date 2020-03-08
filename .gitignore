@@ -3,6 +3,7 @@
 node_modules
 yarn-error.log
 .graphql_ppx_cache
+storybook
 
 # Build directory
 /public

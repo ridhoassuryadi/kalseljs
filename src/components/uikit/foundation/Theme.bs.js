@@ -2,9 +2,9 @@
 'use strict';
 
 var React = require("react");
-var Colors$ReactGatsbyTemplate = require("./Colors.bs.js");
+var Colors$KalseljsCommunityPage = require("./Colors.bs.js");
 
-var context = React.createContext(Colors$ReactGatsbyTemplate.$$default);
+var context = React.createContext(Colors$KalseljsCommunityPage.$$default);
 
 var make = context.Provider;
 
