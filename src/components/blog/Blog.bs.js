@@ -3,7 +3,7 @@
 
 var $$Array = require("bs-platform/lib/js/array.js");
 var React = require("react");
-var Blog__Post$ReactGatsbyTemplate = require("./Blog__Post.bs.js");
+var Blog__Post$KalseljsCommunityPage = require("./Blog__Post.bs.js");
 
 function str(prim) {
   return prim;
@@ -12,7 +12,7 @@ function str(prim) {
 function Blog(Props) {
   var posts = Props.posts;
   var renderPosts = $$Array.map((function (post) {
-          return React.createElement(Blog__Post$ReactGatsbyTemplate.make, {
+          return React.createElement(Blog__Post$KalseljsCommunityPage.make, {
                       post: post,
                       key: post.id
                     });

@@ -2,13 +2,13 @@
 'use strict';
 
 var React = require("react");
-var Theme$ReactGatsbyTemplate = require("../uikit/foundation/Theme.bs.js");
-var Colors$ReactGatsbyTemplate = require("../uikit/foundation/Colors.bs.js");
+var Theme$KalseljsCommunityPage = require("../uikit/foundation/Theme.bs.js");
+var Colors$KalseljsCommunityPage = require("../uikit/foundation/Colors.bs.js");
 
 function Store(Props) {
   var children = Props.children;
-  return React.createElement(Theme$ReactGatsbyTemplate.Provider.make, {
-              value: Colors$ReactGatsbyTemplate.$$default,
+  return React.createElement(Theme$KalseljsCommunityPage.Provider.make, {
+              value: Colors$KalseljsCommunityPage.$$default,
               children: children
             });
 }
