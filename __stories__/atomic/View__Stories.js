@@ -3,8 +3,8 @@
 
 var React = require("react");
 var React$1 = require("@storybook/react");
-var View$KalseljsCommunityPage = require("../../src/components/uikit/atomic/View.bs.js");
-var Constants$KalseljsCommunityPage = require("../../src/commons/Constants.bs.js");
+var View$KalseljsCommunityPage = require("../../src/components/uikit/atomic/View.js");
+var Constants$KalseljsCommunityPage = require("../../src/commons/Constants.js");
 
 function str(prim) {
   return prim;

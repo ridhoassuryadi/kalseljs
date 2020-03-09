@@ -1,7 +1,7 @@
 import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
 
-import Layout from 'components/layout'
+import Layout from 'uikit/templates/layout'
 import Blog from 'components/blog/Blog.bs'
 
 const BlogPage = () => (

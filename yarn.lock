@@ -28,6 +28,25 @@
     invariant "^2.2.4"
     semver "^5.5.0"
 
+"@babel/core@7.1.0":
+  version "7.1.0"
+  resolved "https://registry.yarnpkg.com/@babel/core/-/core-7.1.0.tgz#08958f1371179f62df6966d8a614003d11faeb04"
+  dependencies:
+    "@babel/code-frame" "^7.0.0"
+    "@babel/generator" "^7.0.0"
+    "@babel/helpers" "^7.1.0"
+    "@babel/parser" "^7.1.0"
+    "@babel/template" "^7.1.0"
+    "@babel/traverse" "^7.1.0"
+    "@babel/types" "^7.0.0"
+    convert-source-map "^1.1.0"
+    debug "^3.1.0"
+    json5 "^0.5.0"
+    lodash "^4.17.10"
+    resolve "^1.3.2"
+    semver "^5.4.1"
+    source-map "^0.5.0"
+
 "@babel/core@^7.1.0", "@babel/core@^7.4.5", "@babel/core@^7.7.5":
   version "7.8.7"
   resolved "https://registry.yarnpkg.com/@babel/core/-/core-7.8.7.tgz#b69017d221ccdeb203145ae9da269d72cf102f3b"
@@ -67,6 +86,15 @@
     semver "^5.4.1"
     source-map "^0.5.0"
 
+"@babel/generator@^7.0.0", "@babel/generator@^7.4.0", "@babel/generator@^7.8.6", "@babel/generator@^7.8.7":
+  version "7.8.7"
+  resolved "https://registry.yarnpkg.com/@babel/generator/-/generator-7.8.7.tgz#870b3cf7984f5297998152af625c4f3e341400f7"
+  dependencies:
+    "@babel/types" "^7.8.7"
+    jsesc "^2.5.1"
+    lodash "^4.17.13"
+    source-map "^0.5.0"
+
 "@babel/generator@^7.2.2":
   version "7.3.3"
   resolved "https://registry.yarnpkg.com/@babel/generator/-/generator-7.3.3.tgz#185962ade59a52e00ca2bdfcfd1d58e528d4e39e"
@@ -76,15 +104,6 @@
     lodash "^4.17.11"
     source-map "^0.5.0"
     trim-right "^1.0.1"
-
-"@babel/generator@^7.4.0", "@babel/generator@^7.8.6", "@babel/generator@^7.8.7":
-  version "7.8.7"
-  resolved "https://registry.yarnpkg.com/@babel/generator/-/generator-7.8.7.tgz#870b3cf7984f5297998152af625c4f3e341400f7"
-  dependencies:
-    "@babel/types" "^7.8.7"
-    jsesc "^2.5.1"
-    lodash "^4.17.13"
-    source-map "^0.5.0"
 
 "@babel/generator@^7.7.4":
   version "7.7.4"
@@ -461,6 +480,14 @@
     "@babel/traverse" "^7.8.3"
     "@babel/types" "^7.8.3"
 
+"@babel/helpers@^7.1.0", "@babel/helpers@^7.8.4":
+  version "7.8.4"
+  resolved "https://registry.yarnpkg.com/@babel/helpers/-/helpers-7.8.4.tgz#754eb3ee727c165e0a240d6c207de7c455f36f73"
+  dependencies:
+    "@babel/template" "^7.8.3"
+    "@babel/traverse" "^7.8.4"
+    "@babel/types" "^7.8.3"
+
 "@babel/helpers@^7.7.4":
   version "7.7.4"
   resolved "https://registry.yarnpkg.com/@babel/helpers/-/helpers-7.7.4.tgz#62c215b9e6c712dadc15a9a0dcab76c92a940302"
@@ -468,14 +495,6 @@
     "@babel/template" "^7.7.4"
     "@babel/traverse" "^7.7.4"
     "@babel/types" "^7.7.4"
-
-"@babel/helpers@^7.8.4":
-  version "7.8.4"
-  resolved "https://registry.yarnpkg.com/@babel/helpers/-/helpers-7.8.4.tgz#754eb3ee727c165e0a240d6c207de7c455f36f73"
-  dependencies:
-    "@babel/template" "^7.8.3"
-    "@babel/traverse" "^7.8.4"
-    "@babel/types" "^7.8.3"
 
 "@babel/highlight@^7.0.0":
   version "7.0.0"
@@ -497,7 +516,7 @@
   version "7.3.3"
   resolved "https://registry.yarnpkg.com/@babel/parser/-/parser-7.3.3.tgz#092d450db02bdb6ccb1ca8ffd47d8774a91aef87"
 
-"@babel/parser@^7.4.3", "@babel/parser@^7.8.6", "@babel/parser@^7.8.7":
+"@babel/parser@^7.1.0", "@babel/parser@^7.4.3", "@babel/parser@^7.8.6", "@babel/parser@^7.8.7":
   version "7.8.7"
   resolved "https://registry.yarnpkg.com/@babel/parser/-/parser-7.8.7.tgz#7b8facf95d25fef9534aad51c4ffecde1a61e26a"
 
@@ -938,6 +957,15 @@
     "@babel/helper-plugin-utils" "^7.8.3"
     babel-plugin-dynamic-import-node "^2.3.0"
 
+"@babel/plugin-transform-modules-commonjs@^7.1.0", "@babel/plugin-transform-modules-commonjs@^7.8.3":
+  version "7.8.3"
+  resolved "https://registry.yarnpkg.com/@babel/plugin-transform-modules-commonjs/-/plugin-transform-modules-commonjs-7.8.3.tgz#df251706ec331bd058a34bdd72613915f82928a5"
+  dependencies:
+    "@babel/helper-module-transforms" "^7.8.3"
+    "@babel/helper-plugin-utils" "^7.8.3"
+    "@babel/helper-simple-access" "^7.8.3"
+    babel-plugin-dynamic-import-node "^2.3.0"
+
 "@babel/plugin-transform-modules-commonjs@^7.7.4":
   version "7.7.4"
   resolved "https://registry.yarnpkg.com/@babel/plugin-transform-modules-commonjs/-/plugin-transform-modules-commonjs-7.7.4.tgz#bee4386e550446343dd52a571eda47851ff857a3"
@@ -945,15 +973,6 @@
     "@babel/helper-module-transforms" "^7.7.4"
     "@babel/helper-plugin-utils" "^7.0.0"
     "@babel/helper-simple-access" "^7.7.4"
-    babel-plugin-dynamic-import-node "^2.3.0"
-
-"@babel/plugin-transform-modules-commonjs@^7.8.3":
-  version "7.8.3"
-  resolved "https://registry.yarnpkg.com/@babel/plugin-transform-modules-commonjs/-/plugin-transform-modules-commonjs-7.8.3.tgz#df251706ec331bd058a34bdd72613915f82928a5"
-  dependencies:
-    "@babel/helper-module-transforms" "^7.8.3"
-    "@babel/helper-plugin-utils" "^7.8.3"
-    "@babel/helper-simple-access" "^7.8.3"
     babel-plugin-dynamic-import-node "^2.3.0"
 
 "@babel/plugin-transform-modules-systemjs@^7.7.4":
@@ -1444,7 +1463,7 @@
     globals "^11.1.0"
     lodash "^4.17.10"
 
-"@babel/traverse@^7.4.3", "@babel/traverse@^7.8.3", "@babel/traverse@^7.8.4", "@babel/traverse@^7.8.6":
+"@babel/traverse@^7.1.0", "@babel/traverse@^7.4.3", "@babel/traverse@^7.8.3", "@babel/traverse@^7.8.4", "@babel/traverse@^7.8.6":
   version "7.8.6"
   resolved "https://registry.yarnpkg.com/@babel/traverse/-/traverse-7.8.6.tgz#acfe0c64e1cd991b3e32eae813a6eb564954b5ff"
   dependencies:
@@ -3778,6 +3797,16 @@ bs-date-fns@^0.1.6:
   dependencies:
     date-fns "^1.29.0"
 
+bs-loader@^2.0.7:
+  version "2.0.7"
+  resolved "https://registry.yarnpkg.com/bs-loader/-/bs-loader-2.0.7.tgz#2ce26752e08cab165b0625580e2b2d19476cfc6d"
+  dependencies:
+    "@babel/core" "7.1.0"
+    "@babel/plugin-transform-modules-commonjs" "^7.1.0"
+    bsb-js "^1.0.0"
+    loader-utils "^1.1.0"
+    read-bsconfig "^1.0.1"
+
 bs-platform@^5.2.1:
   version "5.2.1"
   resolved "https://registry.yarnpkg.com/bs-platform/-/bs-platform-5.2.1.tgz#3f76f6d4f4c7255296375a8104c8be332770b691"
@@ -3791,6 +3820,10 @@ bs-storybook@^0.3.0:
 bs-webapi@^0.15.8:
   version "0.15.8"
   resolved "https://registry.yarnpkg.com/bs-webapi/-/bs-webapi-0.15.8.tgz#0e9ce264063ed4ce803e05620f2bf91773f92153"
+
+bsb-js@^1.0.0, bsb-js@^1.1.7:
+  version "1.1.7"
+  resolved "https://registry.yarnpkg.com/bsb-js/-/bsb-js-1.1.7.tgz#12cc91e974f5896b3a2aa8358419d24e56f552c3"
 
 bser@2.1.1:
   version "2.1.1"
@@ -4511,7 +4544,7 @@ convert-hrtime@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/convert-hrtime/-/convert-hrtime-3.0.0.tgz#62c7593f5809ca10be8da858a6d2f702bcda00aa"
 
-convert-source-map@^1.4.0, convert-source-map@^1.5.0, convert-source-map@^1.7.0:
+convert-source-map@^1.1.0, convert-source-map@^1.4.0, convert-source-map@^1.5.0, convert-source-map@^1.7.0:
   version "1.7.0"
   resolved "https://registry.yarnpkg.com/convert-source-map/-/convert-source-map-1.7.0.tgz#17a2cb882d7f77d3490585e2ce6c524424a3a442"
   dependencies:
@@ -4591,7 +4624,7 @@ core-js@^2.6.10, core-js@^2.6.5:
   version "2.6.10"
   resolved "https://registry.yarnpkg.com/core-js/-/core-js-2.6.10.tgz#8a5b8391f8cc7013da703411ce5b585706300d7f"
 
-core-js@^3.0.1, core-js@^3.0.4:
+core-js@^3.0.1, core-js@^3.0.4, core-js@^3.6.4:
   version "3.6.4"
   resolved "https://registry.yarnpkg.com/core-js/-/core-js-3.6.4.tgz#440a83536b458114b9cb2ac1580ba377dc470647"
 
@@ -5017,7 +5050,7 @@ debug@=3.1.0, debug@~3.1.0:
   dependencies:
     ms "2.0.0"
 
-debug@^3.0.0, debug@^3.1.1, debug@^3.2.5, debug@^3.2.6:
+debug@^3.0.0, debug@^3.1.0, debug@^3.1.1, debug@^3.2.5, debug@^3.2.6:
   version "3.2.6"
   resolved "https://registry.yarnpkg.com/debug/-/debug-3.2.6.tgz#e83d17de16d8a7efb7717edbe5fb10135eee629b"
   dependencies:
@@ -6640,6 +6673,15 @@ gatsby-plugin-react-helmet@^3.1.16:
   resolved "https://registry.yarnpkg.com/gatsby-plugin-react-helmet/-/gatsby-plugin-react-helmet-3.1.16.tgz#479738d9f9ee2a312c620c01aa0882a9740537bf"
   dependencies:
     "@babel/runtime" "^7.7.4"
+
+gatsby-plugin-reason@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-reason/-/gatsby-plugin-reason-2.1.0.tgz#3b84277702803d7d2a1d1e20aa6bc8ab18c1ad2c"
+  dependencies:
+    bs-loader "^2.0.7"
+    bsb-js "^1.1.7"
+    core-js "^3.6.4"
+    reason-react "^0.5.3"
 
 gatsby-react-router-scroll@^2.1.17:
   version "2.1.17"
@@ -8665,6 +8707,10 @@ json-stringify-safe@^5.0.1, json-stringify-safe@~5.0.1:
 json3@^3.3.2:
   version "3.3.2"
   resolved "https://registry.yarnpkg.com/json3/-/json3-3.3.2.tgz#3c0434743df93e2f5c42aee7b19bcb483575f4e1"
+
+json5@^0.5.0, json5@^0.5.1:
+  version "0.5.1"
+  resolved "https://registry.yarnpkg.com/json5/-/json5-0.5.1.tgz#1eade7acc012034ad84e2396767ead9fa5495821"
 
 json5@^1.0.1:
   version "1.0.1"
@@ -11574,6 +11620,12 @@ reactcss@^1.2.0:
   resolved "https://registry.yarnpkg.com/reactcss/-/reactcss-1.2.3.tgz#c00013875e557b1cf0dfd9a368a1c3dab3b548dd"
   dependencies:
     lodash "^4.0.1"
+
+read-bsconfig@^1.0.1:
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/read-bsconfig/-/read-bsconfig-1.0.5.tgz#fef6b45b5ff43a26e138389f19282501c6d17d28"
+  dependencies:
+    json5 "^0.5.1"
 
 read-chunk@^3.2.0:
   version "3.2.0"

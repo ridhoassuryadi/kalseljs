@@ -3,7 +3,7 @@
 
 var $$Array = require("bs-platform/lib/js/array.js");
 var React = require("react");
-var Blog__Post$KalseljsCommunityPage = require("./Blog__Post.bs.js");
+var Blog__Post$KalseljsCommunityPage = require("./Blog__Post.js");
 
 function str(prim) {
   return prim;
