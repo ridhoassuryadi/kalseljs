@@ -24,7 +24,8 @@
     "bs-css",
     "bs-date-fns",
     "bs-webapi",
-    "bs-storybook"
+    "bs-storybook",
+    "@moox/bs-react-helmet"
   ],
   "ppx-flags": [
     "graphql_ppx/ppx",
