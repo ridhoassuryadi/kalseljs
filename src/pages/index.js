@@ -1,11 +1,11 @@
 import React from 'react'
 
-import Layout from 'components/layout'
-import Index from 'components/Index.bs'
+import Layout from 'uikit/templates/layout'
+import Home from 'components/Home/Home.bs'
 
 const IndexPage = () => (
   <Layout>
-    <Index />
+    <Home />
   </Layout>
 )
 

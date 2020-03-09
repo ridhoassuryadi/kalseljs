@@ -2,8 +2,8 @@
 'use strict';
 
 var React = require("react");
-var Theme$KalseljsCommunityPage = require("../uikit/foundation/Theme.bs.js");
-var Colors$KalseljsCommunityPage = require("../uikit/foundation/Colors.bs.js");
+var Theme$KalseljsCommunityPage = require("../uikit/foundation/Theme.js");
+var Colors$KalseljsCommunityPage = require("../uikit/foundation/Colors.js");
 
 function Store(Props) {
   var children = Props.children;

@@ -2,7 +2,7 @@
 'use strict';
 
 var React = require("react");
-var Colors$KalseljsCommunityPage = require("./Colors.bs.js");
+var Colors$KalseljsCommunityPage = require("./Colors.js");
 
 var context = React.createContext(Colors$KalseljsCommunityPage.$$default);
 

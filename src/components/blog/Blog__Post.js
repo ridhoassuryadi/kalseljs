@@ -4,7 +4,7 @@
 var Css = require("bs-css/src/Css.js");
 var React = require("react");
 var Gatsby = require("gatsby");
-var Utils$KalseljsCommunityPage = require("../../commons/Utils.bs.js");
+var Utils$KalseljsCommunityPage = require("../../commons/Utils.js");
 
 function str(prim) {
   return prim;
