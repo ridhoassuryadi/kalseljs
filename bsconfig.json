@@ -21,6 +21,7 @@
   "namespace": true,
   "bs-dependencies": [
     "reason-react",
+    "bs-date-fns",
     "bs-css",
     "bs-date-fns",
     "bs-webapi",
@@ -28,8 +29,8 @@
     "@moox/bs-react-helmet"
   ],
   "ppx-flags": [
-    "graphql_ppx/ppx",
-    "ppx-deriving/ppx.js"
+    "ppx-deriving/ppx.js",
+    "graphql_ppx/ppx"
   ],
   "refmt": 3
 }

@@ -7,8 +7,6 @@
     "@babel/core": "^7.4.5",
     "@moox/bs-react-helmet": "^2.1.0",
     "bs-css": "^11.0.0",
-    "bs-css-dom": "^1.0.1",
-    "bs-css-emotion": "^1.0.1",
     "bs-date-fns": "^0.1.6",
     "bs-platform": "^5.2.1",
     "bs-webapi": "^0.15.8",
