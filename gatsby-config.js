@@ -5,12 +5,12 @@ module.exports = {
   },
   plugins: [
     {
-      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      resolve: 'gatsby-plugin-prefetch-google-fonts',
       options: {
         fonts: [
           {
-            family: `Poppins`,
-            variants: [`400`, `600`, `700`],
+            family: 'Poppins',
+            variants: ['400', '600', '700'],
           },
         ],
       },
