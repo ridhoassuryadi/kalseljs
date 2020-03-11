@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import SEO from 'uikit/templates/SEO.bs'
+import GlobalStyles from 'uikit/templates/Global.bs'
 import { StaticQuery, graphql } from 'gatsby'
 
 
@@ -34,9 +35,11 @@ const Layout = ({ children }) => (
             fontFamily: '-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif'
           }}
         >
-          <Store>
-            {children}
-          </Store>
+          <GlobalStyles>
+            <Store>
+              {children}
+            </Store>
+          </GlobalStyles>
         </div>
       </>
     )}
