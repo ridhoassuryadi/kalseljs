@@ -4,6 +4,17 @@ module.exports = {
     author: 'Urang Banua',
   },
   plugins: [
+    {
+      resolve: 'gatsby-plugin-prefetch-google-fonts',
+      options: {
+        fonts: [
+          {
+            family: 'Poppins',
+            variants: ['400', '600', '700'],
+          },
+        ],
+      },
+    },
     'gatsby-plugin-react-helmet',
     {
       resolve: `gatsby-plugin-manifest`,

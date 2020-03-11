@@ -68,7 +68,8 @@ module Styles = {
         margin(zero),
         padding(zero),
         overflow(`hidden),
-        lineHeight(`abs(1.))
+        lineHeight(`abs(1.)),
+        fontFamily("Poppins, sans-serif")
       ],
     );
 
