@@ -9,8 +9,8 @@ module.exports = {
       options: {
         fonts: [
           {
-            family: 'Poppins',
-            variants: ['400', '600', '700'],
+            family: 'Rubik',
+            variants: ['400', '500', '700', '900'],
           },
         ],
       },
