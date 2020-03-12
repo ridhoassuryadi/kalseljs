@@ -26,28 +26,39 @@ module Spectrum = {
 
 type t = {
   primary: Spectrum.t,
-  secondary: Spectrum.t
+  secondary: Spectrum.t,
+  black: Spectrum.t
 };
 
 let primary =
   Spectrum.make(
-    ~darkest="#955B16",
-    ~darker="#C67A1E",
-    ~neutral="#F89825",
-    ~lighter="#FCCC92",
-    ~lightest="#FEEAD3",
+    ~darkest="#B73B36",
+    ~darker="#DB5F4E",
+    ~neutral="#FF886C",
+    ~lighter="#FFAE90",
+    ~lightest="#FFC4A6",
   );
 
 let secondary =
   Spectrum.make(
-    ~darkest="#1C6D73",
-    ~darker="#25919A",
-    ~neutral="#2EB5C0",
-    ~lighter="#97DAE0",
-    ~lightest="#EAF8F9",
+    ~darkest="#B48173",
+    ~darker="#D7B4A8",
+    ~neutral="#FBEDE6",
+    ~lighter="#FCF3EC",
+    ~lightest="#FDF6F1",
+  );
+
+let black = 
+    Spectrum.make(
+    ~darkest="#120D0E",
+    ~darker="#161313",
+    ~neutral="#1A1A1A",
+    ~lighter="#313131",
+    ~lightest="#484848",
   );
 
 let default = {
   primary,
-  secondary
+  secondary,
+  black
 };

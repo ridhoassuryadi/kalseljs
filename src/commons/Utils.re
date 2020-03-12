@@ -56,7 +56,7 @@ module Styles = {
         height(`percent(100.)),
         margin(zero),
         overflow(`hidden),
-        fontSize(`percent(62.5)),
+        fontSize(`percent(100.)),
       ],
     );
 
@@ -68,8 +68,9 @@ module Styles = {
         margin(zero),
         padding(zero),
         overflow(`hidden),
+        backgroundColor(`hex("FAE8DD")),
         lineHeight(`abs(1.)),
-        fontFamily("Poppins, sans-serif")
+        fontFamily("Rubik, sans-serif")
       ],
     );
 
