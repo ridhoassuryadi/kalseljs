@@ -25,6 +25,7 @@ module Styles = {
 let make =
     (
       ~style="",
+      ~additionalClassName="",
       ~onScroll=?,
       ~onPress=?,
       ~onMouseEnter=?,
@@ -33,7 +34,6 @@ let make =
       ~tabIndex=?,
       ~forwardRef=?,
       ~onKeyDown=?,
-      ~testId=?,
       ~id=?,
       ~children=?,
       ~onDoubleClick=?,
@@ -42,7 +42,7 @@ let make =
 
   let props =
     ReactDOMRe.objToDOMProps({
-      "className": Styles.container,
+      "className": Styles.container ++ " " ++ additionalClassName,
       "onScroll": onScroll,
       "onClick": onPress,
       "onMouseEnter": onMouseEnter,
@@ -51,7 +51,6 @@ let make =
       "tabIndex": tabIndex,
       "ref": forwardRef,
       "onKeyDown": onKeyDown,
-      "data-testid": testId,
       "onDoubleClick": onDoubleClick,
       "id": id,
     });

@@ -70,6 +70,8 @@ var Styles = {
 
 function View(Props) {
   Props.style;
+  var match = Props.additionalClassName;
+  var additionalClassName = match !== undefined ? match : "";
   var onScroll = Props.onScroll;
   var onPress = Props.onPress;
   var onMouseEnter = Props.onMouseEnter;
@@ -78,12 +80,11 @@ function View(Props) {
   var tabIndex = Props.tabIndex;
   var forwardRef = Props.forwardRef;
   var onKeyDown = Props.onKeyDown;
-  var testId = Props.testId;
   var id = Props.id;
   var children = Props.children;
   var onDoubleClick = Props.onDoubleClick;
   var props = {
-    className: container,
+    className: container + (" " + additionalClassName),
     onScroll: onScroll,
     onClick: onPress,
     onMouseEnter: onMouseEnter,
@@ -92,7 +93,6 @@ function View(Props) {
     tabIndex: tabIndex,
     ref: forwardRef,
     onKeyDown: onKeyDown,
-    "data-testid": testId,
     onDoubleClick: onDoubleClick,
     id: id
   };
