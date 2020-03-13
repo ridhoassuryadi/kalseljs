@@ -2,14 +2,13 @@
 'use strict';
 
 var React = require("react");
-var HourglassSvg = require("images/icons/hourglass.svg");
 
 function str(prim) {
   return prim;
 }
 
 function Home(Props) {
-  return React.createElement("div", undefined, React.createElement(HourglassSvg.default, { }), React.createElement("p", undefined, "KalselJS ss"));
+  return React.createElement("div", undefined, React.createElement("p", undefined, "KalselJS"));
 }
 
 var make = Home;

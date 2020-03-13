@@ -6,8 +6,7 @@ let str = React.string;
 [@react.component]
 let make = () => {
   <div>
-  <Icons.Hourglass />
-   <p>{"KalselJS ss" |> str}</p>
+   <p>{"KalselJS" |> str}</p>
   </div>;
 };
 
