@@ -8,7 +8,7 @@ import { StaticQuery, graphql } from 'gatsby'
 import Header from 'uikit/organism/Header.bs'
 import Store from 'prelude/Store.bs'
 
-const Layout = ({ children }) => (
+const Layout = ({ setLocale, children }) => (
   <StaticQuery
     query={graphql`
       query SiteTitleQuery {

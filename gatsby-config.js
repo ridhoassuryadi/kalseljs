@@ -38,6 +38,8 @@ module.exports = {
     'gatsby-transformer-remark',
     'gatsby-plugin-offline',
     'gatsby-plugin-react-helmet',
+    // This plugin transforms JSON file nodes.
+    `gatsby-transformer-json`,
     {
       resolve: 'gatsby-plugin-reason',
       options: {
