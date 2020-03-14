@@ -39,7 +39,8 @@ module Context = {
   type dispatch = action => unit;
   type contextValue = (locale, dispatch);
 
-  let initValue: contextValue = (Id, _ => ignore());
+  let initialState = Bn;
+  let initValue: contextValue = (initialState, _ => ignore());
 
   // Create the context that will hold the valuer
   let context = React.createContext(initValue);
@@ -62,8 +63,7 @@ module Internal_Provider = {
 module Provider = {
   [@react.component]
   let make = (~children) => {
-    let initialState = Bn;
-    let (locale, dispatch) = reducer->React.useReducer(initialState);
+    let (locale, dispatch) = reducer->React.useReducer(Context.initialState);
 
   <Internal_Provider value=(locale,dispatch)>
       <ReactIntl.IntlProvider
