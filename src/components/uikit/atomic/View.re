@@ -1,5 +1,8 @@
 // This Api Based on React Native Web
 
+[@bs.deriving jsConverter]
+type variant = [ | `Section | `Div | `Button | `Span ];
+
 module Styles = {
   open Css;
   let container =
@@ -24,6 +27,7 @@ module Styles = {
 [@react.component]
 let make =
     (
+      ~as_=`Div,
       ~style="",
       ~additionalClassName="",
       ~onScroll=?,
@@ -31,12 +35,16 @@ let make =
       ~onMouseEnter=?,
       ~onMouseLeave=?,
       ~onBlur=?,
-      ~tabIndex=?,
       ~forwardRef=?,
       ~onKeyDown=?,
+      ~accessibilityLabel=?,
+      ~accessibilityRole=?,
+      ~accessibilityRoleDescription=?,
+      ~accessibilityLabelledBy=?,
       ~id=?,
       ~children=?,
       ~onDoubleClick=?,
+      ~tabIndex=0,
     ) => {
 
 
@@ -52,6 +60,10 @@ let make =
       "ref": forwardRef,
       "onKeyDown": onKeyDown,
       "onDoubleClick": onDoubleClick,
+      "aria-label": accessibilityLabel,
+      "aria-roledescription": accessibilityRoleDescription,
+      "aria-labelledby": accessibilityLabelledBy,
+      "role": accessibilityRole,
       "id": id,
     });
 
@@ -61,5 +73,5 @@ let make =
     | None => React.null
     };
 
-  ReactDOMRe.createElement("div", ~props, [|child|]);
+  ReactDOMRe.createElement(as_ -> variantToJs -> String.lowercase, ~props, [|child|]);
 };

@@ -24,6 +24,11 @@ let make =
       ~onMouseLeave=?,
       ~justifyContent=?,
       ~alignItems=?,
+      ~accessibilityLabel=?,
+      ~accessibilityRole=?,
+      ~accessibilityRoleDescription=?,
+      ~accessibilityLabelledBy=?,
+      ~as_=?,
       ~id=?,
       ~children,
     ) => {
@@ -37,7 +42,12 @@ let make =
     ?onPress
     ?onMouseEnter
     ?onMouseLeave
-    ?id>
+    ?accessibilityLabel
+    ?accessibilityRole
+    ?accessibilityRoleDescription
+    ?accessibilityLabelledBy
+    ?id
+    ?as_>
     children
   </View>;
 };

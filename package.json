@@ -64,10 +64,15 @@
     "bs-storybook": "^0.3.0",
     "graphql_ppx": "^0.2.8",
     "husky": "^4.2.3",
+    "lint-staged": "^10.0.8",
     "prettier": "^1.19.1"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/KalselJS/kalseljs"
+  },
+  "lint-staged": {
+    "*.{re,rei}": ["yarn bsrefmt --in-place"],
+    "*.{js,jsx,html,css}": ["prettier --write", "git add"]
   }
 }

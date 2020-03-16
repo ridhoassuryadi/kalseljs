@@ -27,7 +27,9 @@ let make =
       ~style="",
       ~hoverOpacity=0.85,
       ~activeOpacity=0.5,
+      ~accessibilityRoleDescription=?,
       ~containerType: container=`Column,
+      ~accessibilityLabel=?,
       ~children,
     ) => {
   let resolvedStyle =
@@ -38,7 +40,12 @@ let make =
 
   switch (containerType) {
   | `Column =>
-    <View style=resolvedStyle ?onPress ?tabIndex ?onBlur >
+    <View
+      as_=`Button
+      accessibilityRole="button"
+      ?accessibilityLabel
+      ?accessibilityRoleDescription
+      style=resolvedStyle ?onPress ?tabIndex ?onBlur >
       children
     </View>
   | `Row => <Row style=resolvedStyle ?onPress> children </Row>
