@@ -16,6 +16,8 @@ module.exports = ({_stage, actions}) => {
         bindings: path.resolve(__dirname, '../src/bindings'),
         pages: path.resolve(__dirname, '../src/pages'),
         images: path.resolve(__dirname, '../src/images'),
+        translations: path.resolve(__dirname, '../translations'),
+        commons: path.resolve(__dirname, '../src/commons'),
       },
       extensions: ['.js', '.bs.js']
     },
