@@ -13,3 +13,4 @@ storybook
 /lib
 .merlin
 .bsb.lock
+*.bs.js
