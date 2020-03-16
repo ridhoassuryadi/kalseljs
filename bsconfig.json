@@ -26,7 +26,8 @@
     "bs-date-fns",
     "bs-webapi",
     "bs-storybook",
-    "@moox/bs-react-helmet"
+    "@moox/bs-react-helmet",
+    "bs-react-intl"
   ],
   "ppx-flags": [
     "ppx-deriving/ppx.js",
