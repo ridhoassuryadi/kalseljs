@@ -48,6 +48,8 @@
   "devDependencies": {
     "@babel/preset-env": "^7.8.7",
     "@babel/preset-react": "^7.8.3",
+    "@commitlint/cli": "^8.3.5",
+    "@commitlint/config-conventional": "^8.3.4",
     "@storybook/addon-actions": "^5.1.9",
     "@storybook/addon-knobs": "^5.1.9",
     "@storybook/addon-storyshots": "^5.1.10",
@@ -58,6 +60,7 @@
     "babel-preset-gatsby": "^0.2.31",
     "bs-storybook": "^0.3.0",
     "graphql_ppx": "^0.2.8",
+    "husky": "^4.2.3",
     "prettier": "^1.19.1"
   },
   "repository": {
