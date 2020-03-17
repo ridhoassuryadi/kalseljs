@@ -1,4 +1,3 @@
-
 type color = Css_AtomicTypes.Color.t;
 
 module Spectrum = {
@@ -23,11 +22,10 @@ module Spectrum = {
   };
 };
 
-
 type t = {
   primary: Spectrum.t,
   secondary: Spectrum.t,
-  black: Spectrum.t
+  black: Spectrum.t,
 };
 
 let primary =
@@ -36,7 +34,7 @@ let primary =
     ~darker="#DB5F4E",
     ~neutral="#FF886C",
     ~lighter="#FFAE90",
-    ~lightest="#FFC4A6",
+    ~lightest="#FFDCC4",
   );
 
 let secondary =
@@ -48,8 +46,8 @@ let secondary =
     ~lightest="#FDF6F1",
   );
 
-let black = 
-    Spectrum.make(
+let black =
+  Spectrum.make(
     ~darkest="#120D0E",
     ~darker="#161313",
     ~neutral="#1A1A1A",
@@ -57,8 +55,4 @@ let black =
     ~lightest="#484848",
   );
 
-let default = {
-  primary,
-  secondary,
-  black
-};
+let default = {primary, secondary, black};
