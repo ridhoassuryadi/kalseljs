@@ -4,18 +4,16 @@ module Styles = {
   open Css;
 
   let create = (activeOpacity, hoverOpacity) =>
-      style([
-        active([
-          opacity(activeOpacity),
-          transition(~duration=0, "opacity"),
-        ]),
-        hover([
-          opacity(hoverOpacity),
-          transition(~duration=0, "opacity"),
-          cursor(`pointer),
-        ]),
-        zIndex(1),
-      ])
+    style([
+      backgroundColor(`transparent),
+      active([opacity(activeOpacity), transition(~duration=0, "opacity")]),
+      hover([
+        opacity(hoverOpacity),
+        transition(~duration=0, "opacity"),
+        cursor(`pointer),
+      ]),
+      zIndex(1),
+    ]);
 };
 
 [@react.component]
@@ -33,10 +31,7 @@ let make =
       ~children,
     ) => {
   let resolvedStyle =
-    Css.merge([
-      Styles.create(activeOpacity, hoverOpacity),
-      style,
-    ]);
+    Css.merge([Styles.create(activeOpacity, hoverOpacity), style]);
 
   switch (containerType) {
   | `Column =>
@@ -45,7 +40,10 @@ let make =
       accessibilityRole="button"
       ?accessibilityLabel
       ?accessibilityRoleDescription
-      style=resolvedStyle ?onPress ?tabIndex ?onBlur >
+      style=resolvedStyle
+      ?onPress
+      ?tabIndex
+      ?onBlur>
       children
     </View>
   | `Row => <Row style=resolvedStyle ?onPress> children </Row>

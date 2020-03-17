@@ -1,7 +1,7 @@
 // This Api Based on React Native Web
 
 [@bs.deriving jsConverter]
-type variant = [ | `Section | `Div | `Button | `Span ];
+type variant = [ | `Section | `Div | `Button | `Span | `p];
 
 module Styles = {
   open Css;
@@ -46,11 +46,9 @@ let make =
       ~onDoubleClick=?,
       ~tabIndex=0,
     ) => {
-
-
   let props =
     ReactDOMRe.objToDOMProps({
-      "className": Styles.container ++ " " ++ additionalClassName,
+      "className": Css.merge([Styles.container, style]),
       "onScroll": onScroll,
       "onClick": onPress,
       "onMouseEnter": onMouseEnter,
@@ -73,5 +71,9 @@ let make =
     | None => React.null
     };
 
-  ReactDOMRe.createElement(as_ -> variantToJs -> String.lowercase, ~props, [|child|]);
+  ReactDOMRe.createElement(
+    as_->variantToJs->String.lowercase,
+    ~props,
+    [|child|],
+  );
 };
