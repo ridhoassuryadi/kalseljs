@@ -2,7 +2,10 @@
 // result = "Sunday, February 17, 2019"
 
 let formatDate = (isoDateString: string) => {
-  DateFns.internal_format(Js.Date.fromString(isoDateString), "dddd, MMMM D, YYYY");
+  DateFns.internal_format(
+    Js.Date.fromString(isoDateString),
+    "dddd, MMMM D, YYYY",
+  );
 };
 
 module Option = {
@@ -27,7 +30,8 @@ module Styles = {
    * because this preset doesnt have binding, we just insert global html from global method emotion.
    */
   let preset = () => {
-    global("
+    global(
+      "
       html, body, div, span, applet, object, iframe,
       h1, h2, h3, h4, h5, h6, p, blockquote, pre,
       a, abbr, acronym, address, big, cite, code,
@@ -41,13 +45,15 @@ module Styles = {
       figure, figcaption, footer, header, hgroup,
       menu, nav, output, ruby, section, summary,
       time, mark, audio, video
-    ",[
-      margin(zero),
-      border(zero, solid, black),
-      fontSize(`percent(100.)),
-      verticalAlign(`baseline),
-      fontSize(inherit_)
-    ]);
+    ",
+      [
+        margin(zero),
+        border(zero, solid, black),
+        fontSize(`percent(100.)),
+        verticalAlign(`baseline),
+        fontSize(inherit_),
+      ],
+    );
 
     global(
       "html",
@@ -70,57 +76,38 @@ module Styles = {
         overflow(`hidden),
         backgroundColor(`hex("FAE8DD")),
         lineHeight(`abs(1.)),
-        fontFamily("Rubik, sans-serif")
+        fontFamily("Rubik, sans-serif"),
       ],
     );
 
     global(
       "article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section",
-    [ display(`block) ]
-    )
+      [display(`block)],
+    );
 
-    global(
-      "ol, ul",
-      [
-        listStyleType(`none)
-      ]
-    )
+    global("ol, ul", [listStyleType(`none)]);
 
-    global(
-      "blockquote, q",
-      [
-        unsafe("quotes", "none")
-      ]
-    )
+    global("blockquote, q", [unsafe("quotes", "none")]);
 
     global(
       "blockquote:before, blockquote:after, q:before, q:after",
-      [
-        unsafe("content", "''"),
-        unsafe("content", "none"),
-      ]
-    )
+      [unsafe("content", "''"), unsafe("content", "none")],
+    );
 
-    global(
-      "table",
-      [
-        borderCollapse(`collapse),
-        borderSpacing(zero)
-      ]
-    )
+    global("table", [borderCollapse(`collapse), borderSpacing(zero)]);
 
     global(
       "input[type=search]::-webkit-search-cancel-button,
        input[type=search]::-webkit-search-decoration,
        input[type=search]::-webkit-search-results-button,
        input[type=search]::-webkit-search-results-decoration",
-       [
+      [
         unsafe("-webkit-appearance", "none"),
         unsafe("-moz-appearance", "none"),
-       ]
-    )
-  }
-}
+      ],
+    );
+  };
+};
 
 let translationsToDict = (translations: array(ReactIntl.translation)) => {
   translations->Belt.Array.reduce(
@@ -137,4 +124,18 @@ let translationsToDict = (translations: array(ReactIntl.translation)) => {
       dict;
     },
   );
+};
+
+module List = {
+  let rec getElementAt = (~index: int, l: list('a)) =>
+    switch (l) {
+    | [] => None
+    | [head, ...tail] =>
+      Js.log(head);
+      if (index <= 0) {
+        Some(head);
+      } else {
+        getElementAt(~index=index - 1, tail);
+      };
+    };
 };
