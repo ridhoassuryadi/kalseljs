@@ -1,17 +1,10 @@
 open Utils.Option.Infix;
 
-type textVariant = [
-  | `Primary
-  | `Secondary
-];
+type textVariant = [ | `Primary | `Secondary];
 
-type textSize = [
-  | `Small
-  | `Medium
-  | `Large
-];
+type textSize = [ | `Small | `Medium | `Large];
 
-type fontWeightType = [ | `Normal | `SemiBold | `Bold ];
+type fontWeightType = [ | `Normal | `SemiBold | `Bold];
 
 module Styles = {
   open Css;
@@ -20,7 +13,6 @@ module Styles = {
     style([
       borderWidth(zero),
       boxSizing(`borderBox),
-      color(`currentColor),
       display(`inline),
       fontFamily("Rubik, sans-serif"),
       fontStyle(`inherit_),
@@ -37,9 +29,9 @@ module Styles = {
 
   let createStyleBasedOnTextSize = (textSize: textSize) =>
     switch (textSize) {
-    | `Small => style([fontSize(`rem(0.9))])
-    | `Medium => style([fontSize(`rem(1.))])
-    | `Large => style([fontSize(`rem(1.1))])
+    | `Small => style([fontSize(`rem(0.8))])
+    | `Medium => style([fontSize(`rem(1.10))])
+    | `Large => style([fontSize(`rem(1.5))])
     };
 
   let createStyleBasedOnTextType =
@@ -62,7 +54,6 @@ module Styles = {
     switch (maxLines) {
     | Some(value) =>
       style([
-        overflow(`hidden),
         textOverflow(`ellipsis),
         unsafe("display", "-webkit-box"),
         important(unsafe("-webkit-line-clamp", value |> string_of_int)),
@@ -127,10 +118,10 @@ let make =
     };
 
   if (hasParentText) {
-      <span ?id className=resolvedStyle> text </span>
+    <span ?id className=resolvedStyle> text </span>;
   } else {
     <Parent.Provider value=true>
-        <p ?id title=?tooltip className=resolvedStyle> text </p>
+      <p ?id title=?tooltip className=resolvedStyle> text </p>
     </Parent.Provider>;
   };
 };
