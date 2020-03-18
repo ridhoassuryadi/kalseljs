@@ -15,6 +15,6 @@ module Storybook = {
     fun
     | `Foundations((foundation: Foundations.t)) =>
       "Foundations | " ++ (foundation |> Foundations.tToJs)
-    | `Components((cell: Components.t)) =>
-      "Components | " ++ (cell |> Components.tToJs);
+    | `Components((atomics: Components.t)) =>
+      "Components | " ++ (atomics |> Components.tToJs);
 };
