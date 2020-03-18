@@ -35,7 +35,7 @@ let primary =
     ~darker="#D05343",
     ~neutral="#F3795D",
     ~lighter="#FFAE90",
-    ~lightest="#FFC4A6",
+    ~lightest="#FFDCC4",
   );
 
 let secondary =
@@ -47,8 +47,6 @@ let secondary =
     ~lightest="#FDF6F1",
   );
 
-let white = "FFFF";
-
 let black =
   Spectrum.make(
     ~darkest="#120D0E",
@@ -57,6 +55,7 @@ let black =
     ~lighter="#313131",
     ~lightest="#484848",
   );
+
 
 let grey =
   Spectrum.make(
