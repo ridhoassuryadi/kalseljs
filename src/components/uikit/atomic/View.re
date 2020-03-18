@@ -1,7 +1,7 @@
 // This Api Based on React Native Web
 
 [@bs.deriving jsConverter]
-type variant = [ | `Section | `Div | `Button | `Span];
+type variant = [ | `Section | `Div | `Button | `Span | `p];
 
 module Styles = {
   open Css;

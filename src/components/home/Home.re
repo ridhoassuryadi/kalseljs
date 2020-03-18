@@ -9,17 +9,6 @@ let make = () => {
     <div className="message">
       <FormattedMessage id="page.hello" defaultMessage="Hello" />
     </div>
-    <br />
-    <TouchableOpacity
-      accessibilityLabel="button"
-      accessibilityRoleDescription="button home"
-      onPress={_ => ()}>
-      {"Klik Saya" |> str}
-    </TouchableOpacity>
-    <br />
-    <Checkbox isChecked=true label="Ini checkbox true" onPress={_ => ()} />
-    <br />
-    <Checkbox isChecked=false label="Ini checkbox false" onPress={_ => ()} />
   </div>;
 };
 
