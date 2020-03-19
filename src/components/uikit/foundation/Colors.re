@@ -27,6 +27,7 @@ type t = {
   secondary: Spectrum.t,
   black: Spectrum.t,
   grey: Spectrum.t,
+  danger: Spectrum.t,
 };
 
 let primary =
@@ -49,13 +50,12 @@ let secondary =
 
 let black =
   Spectrum.make(
-    ~darkest="#120D0E",
+    ~darkest="#000000",
     ~darker="#161313",
     ~neutral="#1A1A1A",
     ~lighter="#313131",
     ~lightest="#484848",
   );
-
 
 let grey =
   Spectrum.make(
@@ -66,4 +66,13 @@ let grey =
     ~lightest="#FFFFFF",
   );
 
-let default = {primary, secondary, black, grey};
+let danger =
+  Spectrum.make(
+    ~darkest="#7A0053",
+    ~darker="#B70059",
+    ~neutral="#FF004B",
+    ~lighter="#FF6675",
+    ~lightest="#FFD0CC",
+  );
+
+let default = {primary, secondary, black, grey, danger};

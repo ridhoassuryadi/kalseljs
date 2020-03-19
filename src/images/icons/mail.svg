@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="22px" height="18px" viewBox="0 0 22 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.2 (78181) - https://sketchapp.com -->
+    <title>Icon / Mail</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Components" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Text-&amp;-Icons" transform="translate(-81.000000, -3907.000000)" fill="#1A1A1A" fill-rule="nonzero">
+            <g id="Icons" transform="translate(80.000000, 3484.000000)">
+                <g id="Icon-/-Mail" transform="translate(0.000000, 420.000000)">
+                    <path d="M3.48695652,21 C2.11344836,21 1,19.8359403 1,18.4 L1,5.6 C1,4.16405965 2.11344836,3 3.48695652,3 L20.5130435,3 C21.8865516,3 23,4.16405965 23,5.6 L23,18.4 C23,19.8359403 21.8865516,21 20.5130435,21 L3.48695652,21 Z M4.6,5.2 C4.1581722,4.86862915 3.53137085,4.9581722 3.2,5.4 C2.86862915,5.8418278 2.9581722,6.46862915 3.4,6.8 L11.4,12.8 C11.7555556,13.0666667 12.2444444,13.0666667 12.6,12.8 L20.6,6.8 C21.0418278,6.46862915 21.1313708,5.8418278 20.8,5.4 C20.4686292,4.9581722 19.8418278,4.86862915 19.4,5.2 L12,10.75 L4.6,5.2 Z" id="Style"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

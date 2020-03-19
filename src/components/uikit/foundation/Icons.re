@@ -9,3 +9,8 @@ module Hourglass = {
   [@bs.module "images/icons/hourglass.svg"] [@react.component]
   external make: (~className: option(string)=?) => React.element = "default";
 };
+
+module Mail = {
+  [@bs.module "images/icons/mail.svg"] [@react.component]
+  external make: (~className: option(string)=?) => React.element = "default";
+};
