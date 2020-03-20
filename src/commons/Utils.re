@@ -25,6 +25,37 @@ module Option = {
 module Styles = {
   open Css;
 
+  module Spacing = {
+    open Option.Infix;
+
+    type t = string;
+
+    let make = (~pt=?, ~pb=?, ~pl=?, ~pr=?, ~mt=?, ~mb=?, ~ml=?, ~mr=?, _unit) => {
+      // Padding
+      let ptStyle = pt <$> (pt' => style([paddingTop(pt')])) |? "";
+      let pbStyle = pb <$> (pb' => style([paddingBottom(pb')])) |? "";
+      let plStyle = pl <$> (pl' => style([paddingLeft(pl')])) |? "";
+      let prStyle = pr <$> (pr' => style([paddingRight(pr')])) |? "";
+
+      // Margin
+      let mtStyle = mt <$> (mt' => style([marginTop(mt')])) |? "";
+      let mbStyle = mb <$> (mb' => style([marginBottom(mb')])) |? "";
+      let mlStyle = ml <$> (ml' => style([marginLeft(ml')])) |? "";
+      let mrStyle = mr <$> (mr' => style([marginRight(mr')])) |? "";
+
+      merge([
+        ptStyle,
+        pbStyle,
+        plStyle,
+        prStyle,
+        mtStyle,
+        mbStyle,
+        mlStyle,
+        mrStyle,
+      ]);
+    };
+  };
+
   /**
    * This preset based on this library "https://gist.github.com/DavidWells/18e73022e723037a50d6"
    * because this preset doesnt have binding, we just insert global html from global method emotion.
