@@ -29,6 +29,7 @@ let make =
     (
       ~as_=`Div,
       ~style="",
+      ~spacing="",
       ~additionalClassName="",
       ~onScroll=?,
       ~onPress=?,
@@ -48,7 +49,7 @@ let make =
     ) => {
   let props =
     ReactDOMRe.objToDOMProps({
-      "className": Css.merge([Styles.container, style]),
+      "className": Css.merge([Styles.container, spacing, style]),
       "onScroll": onScroll,
       "onClick": onPress,
       "onMouseEnter": onMouseEnter,
