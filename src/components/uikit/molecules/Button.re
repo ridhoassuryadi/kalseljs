@@ -105,7 +105,6 @@ let make =
       ~variant: variant=`Primary,
       ~size=`Medium,
       ~block=false,
-      ~shape=`Rounded,
       ~onBlur=?,
       ~tabIndex=?,
       ~text=?,
@@ -125,7 +124,10 @@ let make =
     ]);
 
   let resolvedTextStyle =
-    Css.merge([Styles.createTextStyleBasedOnVariant(~colors, ~variant)]);
+    Css.merge([
+      Styles.createTextStyleBasedOnVariant(~colors, ~variant),
+      textStyle,
+    ]);
 
   <TouchableOpacity
     onPress=?{

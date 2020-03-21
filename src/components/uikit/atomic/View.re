@@ -49,7 +49,8 @@ let make =
     ) => {
   let props =
     ReactDOMRe.objToDOMProps({
-      "className": Css.merge([Styles.container, spacing, style]),
+      "className":
+        Css.merge([Styles.container, spacing, style, additionalClassName]),
       "onScroll": onScroll,
       "onClick": onPress,
       "onMouseEnter": onMouseEnter,
@@ -73,7 +74,7 @@ let make =
     };
 
   ReactDOMRe.createElement(
-    as_->variantToJs->String.lowercase,
+    as_->variantToJs->String.lowercase_ascii,
     ~props,
     [|child|],
   );
