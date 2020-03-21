@@ -18,6 +18,7 @@ module Styles = {
       borderWidth(`rem(0.1)),
       borderStyle(`solid),
       borderColor(colors.black.lightest),
+      selector("image", [filter([`invert(0.)])]),
       hover([
         backgroundColor(colors.primary.neutral),
         selector("p", [color(colors.grey.lightest)]),
