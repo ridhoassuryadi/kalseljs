@@ -30,8 +30,13 @@
     "bs-react-intl"
   ],
   "ppx-flags": [
-    "ppx-deriving/ppx.js",
-    "graphql_ppx/ppx"
+    "@baransu/graphql_ppx_re/ppx",
+    "ppx-deriving/ppx.js"
   ],
+  "bsc-flags": ["-bs-super-errors"],
+  "warnings": {
+    "number": "+A-4-40-42-48",
+    "error": "+A"
+  },
   "refmt": 3
 }

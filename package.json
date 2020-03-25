@@ -8,7 +8,7 @@
     "@moox/bs-react-helmet": "^2.1.0",
     "bs-css": "^11.0.0",
     "bs-date-fns": "^0.1.6",
-    "bs-platform": "^5.2.1",
+    "bs-platform": "7.1.1",
     "bs-react-intl": "^1.1.0",
     "bs-webapi": "^0.15.8",
     "core-js": "^2.6.5",
@@ -51,6 +51,7 @@
   "devDependencies": {
     "@babel/preset-env": "^7.8.7",
     "@babel/preset-react": "^7.8.3",
+    "@baransu/graphql_ppx_re": "^0.7.1",
     "@commitlint/cli": "^8.3.5",
     "@commitlint/config-conventional": "^8.3.4",
     "@storybook/addon-actions": "^5.1.9",
@@ -62,7 +63,6 @@
     "babel-loader": "^8.0.6",
     "babel-preset-gatsby": "^0.2.31",
     "bs-storybook": "^0.3.0",
-    "graphql_ppx": "^0.2.8",
     "husky": "^4.2.3",
     "lint-staged": "^10.0.8",
     "prettier": "^1.19.1"
@@ -72,7 +72,12 @@
     "url": "https://github.com/KalselJS/kalseljs"
   },
   "lint-staged": {
-    "*.{re,rei}": ["yarn bsrefmt --in-place"],
-    "*.{js,jsx,html,css}": ["prettier --write", "git add"]
+    "*.{re,rei}": [
+      "yarn bsrefmt --in-place"
+    ],
+    "*.{js,jsx,html,css}": [
+      "prettier --write",
+      "git add"
+    ]
   }
 }
