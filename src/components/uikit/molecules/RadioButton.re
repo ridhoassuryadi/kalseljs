@@ -52,7 +52,11 @@ module Styles = {
   let row = style([alignItems(`center)]);
 
   let col = style([flexDirection(`column), flex(`num(1.))]);
-  let container = style([padding2(~v=`rem(0.5), ~h=`zero)]);
+  let container =
+    style([
+      padding2(~v=`rem(0.5), ~h=`zero),
+      unsafe("cursor", Constants.Styles.Cursor.pointer),
+    ]);
 };
 
 module Radio_Group_Context = {
