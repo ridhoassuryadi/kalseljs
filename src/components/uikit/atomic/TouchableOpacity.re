@@ -10,7 +10,7 @@ module Styles = {
       hover([
         opacity(hoverOpacity),
         transition(~duration=0, "opacity"),
-        cursor(`pointer),
+        unsafe("cursor", Constants.Styles.Cursor.pointer),
       ]),
       zIndex(1),
     ]);

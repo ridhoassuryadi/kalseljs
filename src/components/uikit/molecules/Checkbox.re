@@ -36,7 +36,7 @@ module Styles = {
       display(`flex),
       flexDirection(`row),
       alignItems(`center),
-      cursor(`pointer),
+      unsafe("cursor", Constants.Styles.Cursor.pointer),
     ]);
 };
 

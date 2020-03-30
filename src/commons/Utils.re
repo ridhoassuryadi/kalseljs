@@ -55,7 +55,6 @@ module Styles = {
       ]);
     };
   };
-
   /**
    * This preset based on this library "https://gist.github.com/DavidWells/18e73022e723037a50d6"
    * because this preset doesnt have binding, we just insert global html from global method emotion.
@@ -108,6 +107,7 @@ module Styles = {
         backgroundColor(`hex("FAE8DD")),
         lineHeight(`abs(1.)),
         fontFamily("Rubik, sans-serif"),
+        unsafe("cursor", Constants.Styles.Cursor.default),
       ],
     );
 
@@ -136,6 +136,11 @@ module Styles = {
         unsafe("-webkit-appearance", "none"),
         unsafe("-moz-appearance", "none"),
       ],
+    );
+
+    global(
+      "button",
+      [hover([unsafe("cursor", Constants.Styles.Cursor.pointer)])],
     );
   };
 };
